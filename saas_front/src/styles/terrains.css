@@ -1,0 +1,570 @@
+/* Section Terrains */
+
+.terrains-section {
+  background-color: var(--blanc, #FFFFFF);
+
+  padding: 90px 0 100px;
+
+  font-family: 'Inter', sans-serif;
+}
+
+/* Titre */
+
+.terrains-header h2 {
+  margin: 0;
+
+  color: var(--vert-fonce, #063B29);
+
+  font-size: clamp(2.3rem, 3.4vw, 3.2rem);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+.terrains-header h2 span {
+  color: var(--vert-vif, #39A935);
+}
+
+/* Container */
+
+.terrains-container {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 0 50px;
+}
+
+/* Ligne Introduction + Filtre */
+
+.terrains-top {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 50px;
+}
+
+/* Introduction */
+
+.terrains-header {
+  max-width: 640px;
+
+  text-align: left;
+}
+
+/* Petit texte */
+
+.terrains-intro {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 16px;
+}
+
+.terrains-intro-line {
+  width: 35px;
+
+  height: 2px;
+
+  border-radius: 5px;
+
+  background: var(--vert-vif, #39A935);
+}
+
+.terrains-intro-text {
+  display: flex;
+
+  gap: 5px;
+
+  color: var(--vert-principal, #0B5D3B);
+
+  font-size: 1.15rem;
+
+  font-weight: 700;
+}
+
+/* Titre */
+
+.terrains-header h2 {
+  margin: 0;
+
+  color: var(--vert-fonce, #063B29);
+
+  font-size: clamp(2.3rem, 3.4vw, 3.2rem);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+/* Description */
+
+.terrains-description {
+  margin-top: 18px;
+
+  color: var(--gris-texte, #64746C);
+
+  font-size: 1.05rem;
+
+  line-height: 1.65;
+}
+
+.terrains-description p {
+  margin: 0;
+}
+
+.terrains-description strong {
+  color: var(--vert-vif, #39A935);
+
+  font-weight: 700;
+}
+
+/* Filtre — card stylée */
+
+.terrains-filter {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  min-width: 260px;
+
+  padding: 22px 24px;
+
+  background: linear-gradient(160deg, #ffffff, #f6faf7);
+
+  border: 1px solid #e4ece7;
+
+  border-radius: 18px;
+
+  box-shadow: 0 12px 30px rgba(6, 59, 41, 0.07);
+}
+
+.terrains-filter-label {
+  color: var(--vert-fonce, #063B29);
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+}
+
+/* Select */
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-icon {
+  position: absolute;
+
+  left: 15px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: var(--vert-vif, #39A935);
+
+  font-size: 15px;
+
+  pointer-events: none;
+}
+
+.select-wrapper select {
+  width: 100%;
+
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  padding: 13px 42px 13px 40px;
+
+  border: 1.5px solid #dce7e1;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background-color: #ffffff;
+
+  color: var(--vert-fonce, #063B29);
+
+  font-size: 0.92rem;
+
+  font-weight: 600;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.select-wrapper select:hover {
+  border-color: var(--vert-vif, #39A935);
+}
+
+.select-wrapper select:focus {
+  border-color: var(--vert-vif, #39A935);
+
+  box-shadow:
+    0 0 0 4px rgba(57, 169, 53, 0.13);
+}
+
+.select-chevron {
+  position: absolute;
+
+  right: 15px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: var(--vert-principal, #0B5D3B);
+
+  font-size: 13px;
+
+  pointer-events: none;
+}
+
+/* Résultats */
+
+.result-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.result-header h3 {
+  margin: 0;
+
+  color: var(--vert-fonce, #063B29);
+
+  font-size: 1.35rem;
+
+  font-weight: 700;
+}
+
+.result-header span {
+  color: var(--gris-texte, #64746C);
+
+  font-size: 0.85rem;
+}
+
+/* Grille */
+
+.terrains-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+/* Carte */
+
+.terrain-card {
+  overflow: hidden;
+
+  background-color: #FFFFFF;
+
+  border: 1px solid #e4ece7;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 25px rgba(6, 59, 41, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.terrain-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(6, 59, 41, 0.12);
+}
+
+/* Image temporaire */
+
+.terrain-placeholder {
+  height: 210px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: var(--gris-clair, #F4F7F5);
+
+  color: #a6b5ad;
+
+  font-size: 2.5rem;
+}
+
+/* Contenu */
+
+.terrain-card-content {
+  padding: 20px;
+}
+
+.terrain-card-content h4 {
+  margin: 0 0 8px;
+
+  color: var(--vert-fonce, #063B29);
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+}
+
+.terrain-card-content p {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0 0 16px;
+
+  color: var(--gris-texte, #64746C);
+
+  font-size: 0.85rem;
+}
+
+.terrain-card-content p i {
+  color: var(--vert-vif, #39A935);
+}
+
+/* Informations */
+
+.terrain-info {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.terrain-info > span:first-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: var(--vert-fonce, #063B29);
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+}
+
+.terrain-info > span:first-child i {
+  color: #f4b400;
+}
+
+.available {
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background-color: rgba(57, 169, 53, 0.1);
+
+  color: var(--vert-vif, #39A935);
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+}
+
+/* Bouton */
+
+.terrain-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: var(--vert-principal, #0B5D3B);
+
+  color: white;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.terrain-button:hover {
+  background-color: var(--vert-vif, #39A935);
+
+  transform: translateY(-1px);
+}
+
+/* Grand écran */
+
+@media (min-width: 1400px) {
+
+  .terrains-section {
+    padding: 105px 0 115px;
+  }
+
+  .terrains-container {
+    max-width: 1550px;
+
+    padding: 0 70px;
+  }
+
+  .terrains-grid {
+    gap: 30px;
+  }
+
+}
+
+/* Tablette */
+
+@media (max-width: 991px) {
+
+  .terrains-container {
+    padding: 0 30px;
+  }
+
+  .terrains-top {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 28px;
+  }
+
+  .terrains-header {
+    max-width: 600px;
+
+    text-align: center;
+  }
+
+  .terrains-intro {
+    justify-content: center;
+  }
+
+  .terrains-filter {
+    width: 100%;
+
+    max-width: 320px;
+  }
+
+  .terrains-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .terrains-section {
+    padding: 65px 0 75px;
+  }
+
+  .terrains-container {
+    padding: 0 20px;
+  }
+
+  .terrains-top {
+    margin-bottom: 35px;
+  }
+
+  .terrains-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .terrains-description {
+    font-size: 0.95rem;
+  }
+
+  .terrains-filter {
+    max-width: 100%;
+  }
+
+  .terrains-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .terrain-placeholder {
+    height: 200px;
+  }
+
+}
+
+/* Petit mobile */
+
+@media (max-width: 400px) {
+
+  .terrains-header h2 {
+    font-size: 2rem;
+  }
+
+  .terrains-description {
+    font-size: 0.9rem;
+  }
+
+}

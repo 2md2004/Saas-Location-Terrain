@@ -1,0 +1,13 @@
+:root {
+  /* Couleurs principales */
+  --vert-principal: #0B5D3B;
+  --vert-terrain: #168A45;
+  --vert-vif: #39A935;
+  --vert-clair: #7BCB45;
+  --vert-fonce: #063B29;
+
+  /* Couleurs neutres */
+  --blanc: #FFFFFF;
+  --gris-clair: #F4F7F5;
+  --gris-texte: #64746C;
+}
