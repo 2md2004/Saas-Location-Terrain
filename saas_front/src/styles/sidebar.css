@@ -1,0 +1,238 @@
+.dashboard-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 22px 14px 16px;
+  font-family: 'Inter', sans-serif;
+  border-right: 1px solid #e5ece8;
+  box-shadow: 3px 0 15px rgba(6, 59, 41, 0.035);
+  z-index: 40;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px 22px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #edf1ef;
+}
+
+.sidebar-logo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-logo-container:hover {
+  background: #f8faf9;
+}
+
+.sidebar-logo {
+  width: 100%;
+  max-width: 170px;
+  height: auto;
+  object-fit: contain;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-section-title {
+  padding: 0 12px;
+  margin-bottom: 7px;
+  color: #98A59F;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.sidebar-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: #64746C;
+  font-size: 0.86rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.sidebar-link-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: transparent;
+  color: #73817B;
+  font-size: 15px;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.sidebar-link-label {
+  flex: 1;
+}
+
+.sidebar-link-arrow {
+  opacity: 0;
+  color: #8A9891;
+  font-size: 10px;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.sidebar-link:hover {
+  background: #f5f9f6;
+  color: #063B29;
+  transform: translateX(2px);
+}
+
+.sidebar-link:hover .sidebar-link-icon {
+  background: #eaf5ee;
+  color: #0B5D3B;
+}
+
+.sidebar-link:hover .sidebar-link-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebar-link.active {
+  background: #edf7f0;
+  color: #063B29;
+  font-weight: 650;
+}
+
+.sidebar-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  bottom: 9px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: #39A935;
+}
+
+.sidebar-link.active .sidebar-link-icon {
+  background: #dff0e5;
+  color: #0B5D3B;
+}
+
+.sidebar-link.active .sidebar-link-arrow {
+  opacity: 1;
+  color: #0B5D3B;
+  transform: translateX(0);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #edf1ef;
+}
+
+.sidebar-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #f0e6e7;
+  border-radius: 11px;
+  background: #fffafa;
+  color: #DC3545;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-logout:hover {
+  background: #fff3f4;
+  border-color: #f2d5d8;
+  transform: translateY(-1px);
+}
+
+.sidebar-logout-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #fff0f1;
+  color: #DC3545;
+  font-size: 14px;
+}
+
+.sidebar-logout-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.sidebar-logout-text strong {
+  color: #b82d3a;
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.sidebar-logout-text span {
+  color: #a27c80;
+  font-size: 0.62rem;
+}
+
+.sidebar-logout-arrow {
+  color: #c9959a;
+  font-size: 10px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    transform: translateX(-100%);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+    box-shadow: none;
+  }
+
+  .dashboard-sidebar.open {
+    transform: translateX(0);
+    box-shadow: 10px 0 35px rgba(0, 0, 0, 0.12);
+  }
+}
