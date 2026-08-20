@@ -54,6 +54,14 @@ body {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 80px;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
